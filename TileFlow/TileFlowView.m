@@ -143,6 +143,11 @@
     return YES;
 }
 
+- (BOOL)isFlipped
+{
+    return YES;
+}
+
 - (NSWindow*)configureSheet
 {
     if (!configureSheet)
