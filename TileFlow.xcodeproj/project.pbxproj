@@ -1,0 +1,316 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB1720D914F3A954000AB718 /* TileDemoView.h in Headers */ = {isa = PBXBuildFile; fileRef = BB1720D714F3A953000AB718 /* TileDemoView.h */; };
+		BB1720DA14F3A954000AB718 /* TileDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1720D814F3A954000AB718 /* TileDemoView.m */; };
+		BBB7E0F514E2954A00E6EFA0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB7E0F414E2954A00E6EFA0 /* Cocoa.framework */; };
+		BBB7E0F714E2954A00E6EFA0 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB7E0F614E2954A00E6EFA0 /* ScreenSaver.framework */; };
+		BBB7E10114E2954A00E6EFA0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBB7E0FF14E2954A00E6EFA0 /* InfoPlist.strings */; };
+		BBB7E10514E2954A00E6EFA0 /* TileFlowView.m in Sources */ = {isa = PBXBuildFile; fileRef = BBB7E10414E2954A00E6EFA0 /* TileFlowView.m */; };
+		BBFE8FA814F3A3A1003AB092 /* ConfigureSheet.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBFE8FA714F3A3A1003AB092 /* ConfigureSheet.xib */; };
+		BBFE8FAC14F3A647003AB092 /* ConfigureSheetController.h in Headers */ = {isa = PBXBuildFile; fileRef = BBFE8FAA14F3A647003AB092 /* ConfigureSheetController.h */; };
+		BBFE8FAD14F3A647003AB092 /* ConfigureSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFE8FAB14F3A647003AB092 /* ConfigureSheetController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB1720D714F3A953000AB718 /* TileDemoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileDemoView.h; sourceTree = "<group>"; };
+		BB1720D814F3A954000AB718 /* TileDemoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileDemoView.m; sourceTree = "<group>"; };
+		BBB7E0F114E2954A00E6EFA0 /* TileFlow.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TileFlow.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBB7E0F414E2954A00E6EFA0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BBB7E0F614E2954A00E6EFA0 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
+		BBB7E0F914E2954A00E6EFA0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BBB7E0FA14E2954A00E6EFA0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BBB7E0FB14E2954A00E6EFA0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BBB7E0FE14E2954A00E6EFA0 /* TileFlow-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TileFlow-Info.plist"; sourceTree = "<group>"; };
+		BBB7E10014E2954A00E6EFA0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BBB7E10214E2954A00E6EFA0 /* TileFlow-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TileFlow-Prefix.pch"; sourceTree = "<group>"; };
+		BBB7E10314E2954A00E6EFA0 /* TileFlowView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TileFlowView.h; sourceTree = "<group>"; };
+		BBB7E10414E2954A00E6EFA0 /* TileFlowView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TileFlowView.m; sourceTree = "<group>"; };
+		BBFE8FA714F3A3A1003AB092 /* ConfigureSheet.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConfigureSheet.xib; sourceTree = "<group>"; };
+		BBFE8FAA14F3A647003AB092 /* ConfigureSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigureSheetController.h; sourceTree = "<group>"; };
+		BBFE8FAB14F3A647003AB092 /* ConfigureSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigureSheetController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBB7E0EC14E2954A00E6EFA0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB7E0F514E2954A00E6EFA0 /* Cocoa.framework in Frameworks */,
+				BBB7E0F714E2954A00E6EFA0 /* ScreenSaver.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBB7E0E414E2954A00E6EFA0 = {
+			isa = PBXGroup;
+			children = (
+				BBB7E0FC14E2954A00E6EFA0 /* TileFlow */,
+				BBB7E0F314E2954A00E6EFA0 /* Frameworks */,
+				BBB7E0F214E2954A00E6EFA0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBB7E0F214E2954A00E6EFA0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBB7E0F114E2954A00E6EFA0 /* TileFlow.saver */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBB7E0F314E2954A00E6EFA0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBB7E0F414E2954A00E6EFA0 /* Cocoa.framework */,
+				BBB7E0F614E2954A00E6EFA0 /* ScreenSaver.framework */,
+				BBB7E0F814E2954A00E6EFA0 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBB7E0F814E2954A00E6EFA0 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBB7E0F914E2954A00E6EFA0 /* AppKit.framework */,
+				BBB7E0FA14E2954A00E6EFA0 /* CoreData.framework */,
+				BBB7E0FB14E2954A00E6EFA0 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BBB7E0FC14E2954A00E6EFA0 /* TileFlow */ = {
+			isa = PBXGroup;
+			children = (
+				BBB7E10314E2954A00E6EFA0 /* TileFlowView.h */,
+				BBB7E10414E2954A00E6EFA0 /* TileFlowView.m */,
+				BBFE8FAA14F3A647003AB092 /* ConfigureSheetController.h */,
+				BBFE8FAB14F3A647003AB092 /* ConfigureSheetController.m */,
+				BB1720D714F3A953000AB718 /* TileDemoView.h */,
+				BB1720D814F3A954000AB718 /* TileDemoView.m */,
+				BBFE8FA714F3A3A1003AB092 /* ConfigureSheet.xib */,
+				BBB7E0FD14E2954A00E6EFA0 /* Supporting Files */,
+			);
+			path = TileFlow;
+			sourceTree = "<group>";
+		};
+		BBB7E0FD14E2954A00E6EFA0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBB7E0FE14E2954A00E6EFA0 /* TileFlow-Info.plist */,
+				BBB7E0FF14E2954A00E6EFA0 /* InfoPlist.strings */,
+				BBB7E10214E2954A00E6EFA0 /* TileFlow-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BBB7E0ED14E2954A00E6EFA0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBFE8FAC14F3A647003AB092 /* ConfigureSheetController.h in Headers */,
+				BB1720D914F3A954000AB718 /* TileDemoView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BBB7E0F014E2954A00E6EFA0 /* TileFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBB7E10814E2954A00E6EFA0 /* Build configuration list for PBXNativeTarget "TileFlow" */;
+			buildPhases = (
+				BBB7E0EB14E2954A00E6EFA0 /* Sources */,
+				BBB7E0EC14E2954A00E6EFA0 /* Frameworks */,
+				BBB7E0ED14E2954A00E6EFA0 /* Headers */,
+				BBB7E0EE14E2954A00E6EFA0 /* Resources */,
+				BBB7E0EF14E2954A00E6EFA0 /* Rez */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TileFlow;
+			productName = TileFlow;
+			productReference = BBB7E0F114E2954A00E6EFA0 /* TileFlow.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBB7E0E614E2954A00E6EFA0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = BBB7E0E914E2954A00E6EFA0 /* Build configuration list for PBXProject "TileFlow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BBB7E0E414E2954A00E6EFA0;
+			productRefGroup = BBB7E0F214E2954A00E6EFA0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBB7E0F014E2954A00E6EFA0 /* TileFlow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBB7E0EE14E2954A00E6EFA0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB7E10114E2954A00E6EFA0 /* InfoPlist.strings in Resources */,
+				BBFE8FA814F3A3A1003AB092 /* ConfigureSheet.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXRezBuildPhase section */
+		BBB7E0EF14E2954A00E6EFA0 /* Rez */ = {
+			isa = PBXRezBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXRezBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBB7E0EB14E2954A00E6EFA0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBB7E10514E2954A00E6EFA0 /* TileFlowView.m in Sources */,
+				BBFE8FAD14F3A647003AB092 /* ConfigureSheetController.m in Sources */,
+				BB1720DA14F3A954000AB718 /* TileDemoView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BBB7E0FF14E2954A00E6EFA0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBB7E10014E2954A00E6EFA0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBB7E10614E2954A00E6EFA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BBB7E10714E2954A00E6EFA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BBB7E10914E2954A00E6EFA0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TileFlow/TileFlow-Prefix.pch";
+				INFOPLIST_FILE = "TileFlow/TileFlow-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		BBB7E10A14E2954A00E6EFA0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TileFlow/TileFlow-Prefix.pch";
+				INFOPLIST_FILE = "TileFlow/TileFlow-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBB7E0E914E2954A00E6EFA0 /* Build configuration list for PBXProject "TileFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBB7E10614E2954A00E6EFA0 /* Debug */,
+				BBB7E10714E2954A00E6EFA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBB7E10814E2954A00E6EFA0 /* Build configuration list for PBXNativeTarget "TileFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBB7E10914E2954A00E6EFA0 /* Debug */,
+				BBB7E10A14E2954A00E6EFA0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBB7E0E614E2954A00E6EFA0 /* Project object */;
+}
