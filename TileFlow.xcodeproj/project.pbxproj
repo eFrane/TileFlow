@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BB1720D914F3A954000AB718 /* TileDemoView.h in Headers */ = {isa = PBXBuildFile; fileRef = BB1720D714F3A953000AB718 /* TileDemoView.h */; };
 		BB1720DA14F3A954000AB718 /* TileDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB1720D814F3A954000AB718 /* TileDemoView.m */; };
+		BB63A13314F3CB0B00302235 /* NSColor+CGConvertAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = BB63A13114F3CB0B00302235 /* NSColor+CGConvertAdditions.h */; };
+		BB63A13414F3CB0B00302235 /* NSColor+CGConvertAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BB63A13214F3CB0B00302235 /* NSColor+CGConvertAdditions.m */; };
 		BBB7E0F514E2954A00E6EFA0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB7E0F414E2954A00E6EFA0 /* Cocoa.framework */; };
 		BBB7E0F714E2954A00E6EFA0 /* ScreenSaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBB7E0F614E2954A00E6EFA0 /* ScreenSaver.framework */; };
 		BBB7E10114E2954A00E6EFA0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBB7E0FF14E2954A00E6EFA0 /* InfoPlist.strings */; };
@@ -21,6 +23,8 @@
 /* Begin PBXFileReference section */
 		BB1720D714F3A953000AB718 /* TileDemoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileDemoView.h; sourceTree = "<group>"; };
 		BB1720D814F3A954000AB718 /* TileDemoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileDemoView.m; sourceTree = "<group>"; };
+		BB63A13114F3CB0B00302235 /* NSColor+CGConvertAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSColor+CGConvertAdditions.h"; sourceTree = "<group>"; };
+		BB63A13214F3CB0B00302235 /* NSColor+CGConvertAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSColor+CGConvertAdditions.m"; sourceTree = "<group>"; };
 		BBB7E0F114E2954A00E6EFA0 /* TileFlow.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TileFlow.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB7E0F414E2954A00E6EFA0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BBB7E0F614E2954A00E6EFA0 /* ScreenSaver.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ScreenSaver.framework; path = System/Library/Frameworks/ScreenSaver.framework; sourceTree = SDKROOT; };
@@ -96,6 +100,8 @@
 				BBFE8FAB14F3A647003AB092 /* ConfigureSheetController.m */,
 				BB1720D714F3A953000AB718 /* TileDemoView.h */,
 				BB1720D814F3A954000AB718 /* TileDemoView.m */,
+				BB63A13114F3CB0B00302235 /* NSColor+CGConvertAdditions.h */,
+				BB63A13214F3CB0B00302235 /* NSColor+CGConvertAdditions.m */,
 				BBFE8FA714F3A3A1003AB092 /* ConfigureSheet.xib */,
 				BBB7E0FD14E2954A00E6EFA0 /* Supporting Files */,
 			);
@@ -121,6 +127,7 @@
 			files = (
 				BBFE8FAC14F3A647003AB092 /* ConfigureSheetController.h in Headers */,
 				BB1720D914F3A954000AB718 /* TileDemoView.h in Headers */,
+				BB63A13314F3CB0B00302235 /* NSColor+CGConvertAdditions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +208,7 @@
 				BBB7E10514E2954A00E6EFA0 /* TileFlowView.m in Sources */,
 				BBFE8FAD14F3A647003AB092 /* ConfigureSheetController.m in Sources */,
 				BB1720DA14F3A954000AB718 /* TileDemoView.m in Sources */,
+				BB63A13414F3CB0B00302235 /* NSColor+CGConvertAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

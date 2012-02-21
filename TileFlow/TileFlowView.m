@@ -8,6 +8,7 @@
 
 #import "TileFlowView.h"
 #import "ConfigureSheetController.h"
+#import "NSColor+CGConvertAdditions.h"
 
 @implementation TileFlowView
 
@@ -92,6 +93,16 @@
                                                (float)rand() / RAND_MAX, 
                                                (float)rand() / RAND_MAX, 
                                                (float)rand() / RAND_MAX);
+    
+    CGColorRef borderColor = [[[NSColor colorWithCGColor:color] 
+                                complementaryColor] CGColor];
+    
+    CGContextSetStrokeColorWithColor(context, borderColor);
+    CGContextStrokeRect(context, CGRectMake(_currentPoint.x, 
+                                            _currentPoint.y, 
+                                            _squareSize, 
+                                            _squareSize));
+    
     CGContextSetFillColorWithColor(context, color);
     CGContextFillRect(context, CGRectMake(_currentPoint.x, 
                                           _currentPoint.y, 
