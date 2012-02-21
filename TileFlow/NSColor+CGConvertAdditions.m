@@ -32,4 +32,20 @@
     return [self colorWithDeviceRed:red green:green blue:blue alpha:alpha];
 }
 
+- (NSColor *)complementaryColor
+{
+    CGFloat hue, saturation, brightness, alpha;
+    
+    hue        = 1 - [self hueComponent];
+    saturation = [self saturationComponent];
+    brightness = [self brightnessComponent];
+    alpha      = [self alphaComponent];
+    
+    NSColor *complementaryColor = [NSColor colorWithCalibratedHue:hue
+                                                       saturation:saturation
+                                                       brightness:brightness
+                                                            alpha:alpha];
+    return complementaryColor;
+}
+
 @end

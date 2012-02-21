@@ -20,4 +20,9 @@
  */
 + (NSColor*)colorWithCGColor:(CGColorRef)aColor;
 
+/**
+ Return complementary color based on hue manipulation
+ */
+- (NSColor *)complementaryColor;
+
 @end
