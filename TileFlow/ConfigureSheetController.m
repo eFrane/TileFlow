@@ -13,14 +13,19 @@
 @implementation ConfigureSheetController
 
 @synthesize squareSizeSlider = _squareSizeSlider;
+@synthesize currentSize      = _currentSize;
 
-- (void)windowDidLoad:(id)sender
+- (id)initWithWindowNibName:(NSString *)windowNibName owner:(id)owner
 {
-    [super showWindow:sender];
-    ScreenSaverDefaults *defaults;
-    defaults = [ScreenSaverDefaults 
-                defaultsForModuleWithName:@"com.meanderingsoul.TileFlow"];
-    [_squareSizeSlider setFloatValue:[defaults floatForKey:@"squareSize"]];            
+    self = [super initWithWindowNibName:windowNibName owner:owner];
+    if (self)
+    {
+        ScreenSaverDefaults *defaults;
+        defaults = [ScreenSaverDefaults 
+                    defaultsForModuleWithName:@"com.meanderingsoul.TileFlow"];
+        [self setCurrentSize:[defaults floatForKey:@"squareSize"]];
+    }
+    return self;
 }
 
 - (IBAction)changeTileSize:(id)sender

@@ -12,6 +12,8 @@
 
 @property (assign) IBOutlet NSSlider* squareSizeSlider;
 
+@property (readwrite) float currentSize;
+
 - (IBAction)changeTileSize:(id)sender;
 
 - (IBAction)okButtonClick:(id)sender;
