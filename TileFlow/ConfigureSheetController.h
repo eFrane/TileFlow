@@ -10,11 +10,11 @@
 
 @interface ConfigureSheetController : NSWindowController
 
-@property (assign) IBOutlet NSSlider* squareSizeSlider;
-
 @property (readwrite) float currentSize;
+@property (readwrite) float currentSpeed;
 
 - (IBAction)changeTileSize:(id)sender;
+- (IBAction)changeSpeed:(id)sender;
 
 - (IBAction)okButtonClick:(id)sender;
 

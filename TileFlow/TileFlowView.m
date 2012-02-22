@@ -20,17 +20,22 @@
 {
     self = [super initWithFrame:frame isPreview:isPreview];
     if (self) {        
-        [self setAnimationTimeInterval:1/20.0];
-        
         ScreenSaverDefaults *defaults;
         defaults = [ScreenSaverDefaults 
                     defaultsForModuleWithName:@"com.meanderingsoul.TileFlow"];
         
+        NSMutableDictionary *initialDefaults = [[NSMutableDictionary alloc] 
+                                                initWithCapacity:2];
+        [initialDefaults setObject:[NSNumber numberWithFloat:80] 
+                            forKey:@"squareSize"];
+        [initialDefaults setObject:[NSNumber numberWithFloat:1/20.0] 
+                            forKey:@"speed"];
+        
         [defaults registerDefaults:[NSDictionary 
-                                    dictionaryWithObject:[NSNumber numberWithFloat:80] 
-                                    forKey:@"squareSize"]];
+                                    dictionaryWithDictionary:initialDefaults]];
         
         _squareSize = [defaults floatForKey:@"squareSize"];
+        [self setAnimationTimeInterval:[defaults floatForKey:@"speed"]];
         
         float y = frame.size.height - _squareSize;
         [self setCurrentPoint:NSMakePoint(-_squareSize, y)];
@@ -39,6 +44,11 @@
         
         [defaults addObserver:self 
                    forKeyPath:@"squareSize" 
+                      options:NSKeyValueObservingOptionNew 
+                      context:nil];
+        
+        [defaults addObserver:self 
+                   forKeyPath:@"speed"
                       options:NSKeyValueObservingOptionNew 
                       context:nil];
     }
@@ -51,6 +61,7 @@
     defaults = [ScreenSaverDefaults 
                 defaultsForModuleWithName:@"com.meanderingsoul.TileFlow"];
     [defaults removeObserver:self forKeyPath:@"squareSize"];
+    [defaults removeObserver:self forKeyPath:@"speed"];
     
     [super dealloc];
 }
@@ -63,8 +74,11 @@
     ScreenSaverDefaults *defaults;
     defaults = [ScreenSaverDefaults 
                 defaultsForModuleWithName:@"com.meanderingsoul.TileFlow"];
-    
-    _squareSize = [defaults floatForKey:@"squareSize"];
+    if ([keyPath isEqualToString:@"squareSize"])
+        _squareSize = [defaults floatForKey:@"squareSize"];
+
+    if ([keyPath isEqualToString:@"speed"])
+        [self setAnimationTimeInterval:[defaults floatForKey:@"speed"]];
 }
 
 - (void)startAnimation

@@ -12,8 +12,7 @@
 
 @implementation ConfigureSheetController
 
-@synthesize squareSizeSlider = _squareSizeSlider;
-@synthesize currentSize      = _currentSize;
+@synthesize currentSize, currentSpeed;
 
 - (id)initWithWindowNibName:(NSString *)windowNibName owner:(id)owner
 {
@@ -24,6 +23,7 @@
         defaults = [ScreenSaverDefaults 
                     defaultsForModuleWithName:@"com.meanderingsoul.TileFlow"];
         [self setCurrentSize:[defaults floatForKey:@"squareSize"]];
+        [self setCurrentSpeed:[defaults floatForKey:@"speed"]];
     }
     return self;
 }
@@ -33,7 +33,19 @@
     ScreenSaverDefaults *defaults;
     defaults = [ScreenSaverDefaults 
                 defaultsForModuleWithName:@"com.meanderingsoul.TileFlow"];
-    [defaults setFloat:[_squareSizeSlider floatValue] forKey:@"squareSize"];
+    [defaults setFloat:[self currentSize] forKey:@"squareSize"];
+}
+
+- (IBAction)changeSpeed:(id)sender
+{
+    ScreenSaverDefaults *defaults;
+    defaults = [ScreenSaverDefaults 
+                defaultsForModuleWithName:@"com.meanderingsoul.TileFlow"];
+    float speed = [self currentSpeed];
+    speed -= 0.1;
+    if (speed < 0) speed *= -1;
+    
+    [defaults setFloat:speed forKey:@"speed"];    
 }
 
 - (IBAction)okButtonClick:(id)sender
