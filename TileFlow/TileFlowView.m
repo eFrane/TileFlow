@@ -19,37 +19,37 @@
 - (id)initWithFrame:(NSRect)frame isPreview:(BOOL)isPreview
 {
     self = [super initWithFrame:frame isPreview:isPreview];
-    if (self) {        
+    if (self) {
         ScreenSaverDefaults *defaults;
-        defaults = [ScreenSaverDefaults 
+        defaults = [ScreenSaverDefaults
                     defaultsForModuleWithName:@"com.meanderingsoul.TileFlow"];
-        
-        NSMutableDictionary *initialDefaults = [[NSMutableDictionary alloc] 
+
+        NSMutableDictionary *initialDefaults = [[NSMutableDictionary alloc]
                                                 initWithCapacity:2];
-        [initialDefaults setObject:[NSNumber numberWithFloat:80] 
+        [initialDefaults setObject:[NSNumber numberWithFloat:80]
                             forKey:@"squareSize"];
-        [initialDefaults setObject:[NSNumber numberWithFloat:1/20.0] 
+        [initialDefaults setObject:[NSNumber numberWithFloat:1/20.0]
                             forKey:@"speed"];
-        
-        [defaults registerDefaults:[NSDictionary 
+
+        [defaults registerDefaults:[NSDictionary
                                     dictionaryWithDictionary:initialDefaults]];
-        
+
         _squareSize = [defaults floatForKey:@"squareSize"];
         [self setAnimationTimeInterval:[defaults floatForKey:@"speed"]];
-        
+
         float y = frame.size.height - _squareSize;
         [self setCurrentPoint:NSMakePoint(-_squareSize, y)];
-        
+
         srand((int)time(NULL));
-        
-        [defaults addObserver:self 
-                   forKeyPath:@"squareSize" 
-                      options:NSKeyValueObservingOptionNew 
+
+        [defaults addObserver:self
+                   forKeyPath:@"squareSize"
+                      options:NSKeyValueObservingOptionNew
                       context:nil];
-        
-        [defaults addObserver:self 
+
+        [defaults addObserver:self
                    forKeyPath:@"speed"
-                      options:NSKeyValueObservingOptionNew 
+                      options:NSKeyValueObservingOptionNew
                       context:nil];
     }
     return self;
@@ -58,21 +58,21 @@
 - (void)dealloc
 {
     ScreenSaverDefaults *defaults;
-    defaults = [ScreenSaverDefaults 
+    defaults = [ScreenSaverDefaults
                 defaultsForModuleWithName:@"com.meanderingsoul.TileFlow"];
     [defaults removeObserver:self forKeyPath:@"squareSize"];
     [defaults removeObserver:self forKeyPath:@"speed"];
-    
+
     [super dealloc];
 }
 
-- (void)observeValueForKeyPath:(NSString *)keyPath 
-                      ofObject:(id)object 
-                        change:(NSDictionary *)change 
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
                        context:(void *)context
 {
     ScreenSaverDefaults *defaults;
-    defaults = [ScreenSaverDefaults 
+    defaults = [ScreenSaverDefaults
                 defaultsForModuleWithName:@"com.meanderingsoul.TileFlow"];
     if ([keyPath isEqualToString:@"squareSize"])
         _squareSize = [defaults floatForKey:@"squareSize"];
@@ -99,56 +99,41 @@
 - (void)animateOneFrame
 {
     [self nextPoint];
-    
+
     CGContextRef context = [[NSGraphicsContext currentContext] graphicsPort];
 
     // draw tile
-    CGColorRef color = CGColorCreateGenericRGB((float)rand() / RAND_MAX, 
-                                               (float)rand() / RAND_MAX, 
-                                               (float)rand() / RAND_MAX, 
+    CGColorRef color = CGColorCreateGenericRGB((float)rand() / RAND_MAX,
+                                               (float)rand() / RAND_MAX,
+                                               (float)rand() / RAND_MAX,
                                                (float)rand() / RAND_MAX);
-    
-    CGColorRef borderColor = [[[NSColor colorWithCGColor:color] 
+
+    CGColorRef borderColor = [[[NSColor colorWithCGColor:color]
                                 complementaryColor] CGColor];
-    
+
     CGContextSetStrokeColorWithColor(context, borderColor);
-    CGContextStrokeRect(context, CGRectMake(_currentPoint.x, 
-                                            _currentPoint.y, 
-                                            _squareSize, 
+    CGContextStrokeRect(context, CGRectMake(_currentPoint.x,
+                                            _currentPoint.y,
+                                            _squareSize,
                                             _squareSize));
-    
+
     CGContextSetFillColorWithColor(context, color);
-    CGContextFillRect(context, CGRectMake(_currentPoint.x, 
-                                          _currentPoint.y, 
-                                          _squareSize, 
-                                          _squareSize));    
+    CGContextFillRect(context, CGRectMake(_currentPoint.x,
+                                          _currentPoint.y,
+                                          _squareSize,
+                                          _squareSize));
 }
 
 -(void)nextPoint
 {
     [self willChangeValueForKey:@"currentPoint"];
-    /*
-    if ([self bounds].size.width > _currentPoint.x)
-    {
-        _currentPoint.x += _squareSize;
-    } else 
-    {
-        _currentPoint.x = 0;
-        _currentPoint.y -= _squareSize;
-        
-        if (_currentPoint.y < 0)
-        {
-            _currentPoint.y = [self bounds].size.height - _squareSize;
-        }
-    }
-    */
-    
+
     int max_x = (int)([self frame].size.width / _squareSize) + 1;
     int max_y = (int)([self frame].size.height / _squareSize) + 1;
-    
+
     _currentPoint.x = _squareSize * (rand() % max_x);
     _currentPoint.y = _squareSize * (rand() % max_y);
-    
+
     [self didChangeValueForKey:@"currentPoint"];
 }
 
@@ -166,10 +151,10 @@
 {
     if (!configureSheet)
     {
-        configureSheet = [[ConfigureSheetController alloc] 
+        configureSheet = [[ConfigureSheetController alloc]
                           initWithWindowNibName:@"ConfigureSheet"];
     }
-    
+
     return [configureSheet window];
 }
 
